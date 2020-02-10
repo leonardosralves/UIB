@@ -6,7 +6,7 @@ public class helloworld {
 		Scanner leTeclado = new Scanner (System.in);
 		System.out.println("Digite seu nome!");
 		String nome = leTeclado.next();
-		System.out.println ("Seu nome é" + nome);
+		System.out.println ("Seu nome é " + nome);
 	}
 
 }
