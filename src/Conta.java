@@ -1,9 +1,22 @@
 
 public class Conta {
 	
-	public String numero;
-	public double saldo;
-	public Cliente DonoDaConta;
+	private String numero;
+	private double saldo;
+	private Cliente DonoDaConta;
+	
+	public void creditar (double valor) {
+		saldo = saldo  + valor;
+	}
+	
+	public void debitar (double valor) {
+		saldo = saldo - valor;
+	}
+	
+	public void transferir (double valor, Conta contaDestino) {
+		debitar (valor);
+		contaDestino.creditar (valor);
+	}
 	
 	public String getNumero() {
 		return numero;
@@ -28,6 +41,4 @@ public class Conta {
 	public void setDonoDaConta(Cliente donoDaConta) {
 		DonoDaConta = donoDaConta;
 	}
-	
-
 }
